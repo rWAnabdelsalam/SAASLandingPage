@@ -1,0 +1,142 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--clr-white);
+    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.06);
+}
+
+.navbar__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar__logo {
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--clr-dark);
+}
+
+.navbar__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 4px;
+}
+
+.navbar__links button,
+.navbar__drawer button {
+    border: 0;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.navbar__links button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: var(--clr-muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar__links button:hover {
+    color: var(--clr-dark);
+    background: var(--clr-bg);
+}
+
+.navbar__cta {
+    padding: 9px 18px;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--clr-blue);
+    color: var(--clr-white);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar__cta:hover {
+    background: var(--clr-blue-hover);
+}
+
+.navbar__burger {
+    display: none;
+    padding: 4px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.navbar__burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--clr-dark);
+    border-radius: 2px;
+    transition: 0.25s ease;
+}
+
+.navbar__burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.navbar__drawer {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--clr-white);
+    transition: 0.3s ease;
+}
+
+.navbar__drawer--open {
+    max-height: 360px;
+    padding: 16px 24px;
+    border-top: 1px solid var(--clr-border);
+}
+
+.navbar__drawer button {
+    width: 100%;
+    padding: 12px 0;
+    text-align: left;
+    color: var(--clr-text);
+    font-size: 16px;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.navbar__drawer .btn {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    background: var(--clr-blue);
+    color: var(--clr-white);
+    text-align: center;
+    border-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar__links,
+    .navbar__cta {
+        display: none;
+    }
+
+    .navbar__burger {
+        display: block;
+    }
+}

@@ -1,0 +1,165 @@
+.pricing {
+    padding: 5rem 1.5rem;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+.pricing__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    align-items: stretch;
+
+}
+
+/* Base card */
+.pricing-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 2rem 1.75rem;
+    text-align: left;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* Popular card overrides */
+.pricing-card--popular {
+    background: var(--clr-blue);
+    border-color: var(--clr-blue);
+    color: white;
+    transform: translateY(-8px);
+}
+
+.pricing-card--popular:hover {
+    transform: translateY(-12px);
+}
+
+/* Badge */
+.pricing-card__badge {
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 26px;
+    border: 1px solid #2563eb;
+    border-radius: 999px;
+    background: #fff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+
+}
+
+/* Name */
+.pricing-card__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    margin-top: 2rem;
+}
+
+/* Description */
+.pricing-card__desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-bottom: 1.25rem;
+}
+
+.pricing-card--popular .pricing-card__desc {
+    color: var(--soft-color);
+}
+
+/* Price row */
+.pricing-card__price {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card__currency {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--clr-blue);
+}
+
+.pricing-card--popular .pricing-card__currency {
+    color: var(--soft-color);
+}
+
+.pricing-card__amount {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.pricing-card__per {
+    font-size: 0.85rem;
+    color: var(--clr-blue);
+    margin-left: 2px;
+}
+
+.pricing-card--popular .pricing-card__per {
+    color: var(--soft-color);
+}
+
+/* Perks list */
+.pricing-card__perks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+    flex: 1;
+
+}
+
+.pricing-card__perks li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.pricing-card--popular .pricing-card__perks li {
+    color: #cbd5e1;
+}
+
+.perk-icon {
+    font-weight: 700;
+    color: var(--soft-color);
+}
+
+/* Button */
+.pricing-card__btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .pricing__grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .pricing-card--popular {
+        transform: none;
+    }
+
+    .pricing-card--popular:hover {
+        transform: translateY(-4px);
+    }
+}
