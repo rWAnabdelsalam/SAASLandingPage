@@ -18,39 +18,38 @@ npm -v
 
 ### 📁 Project Structure
 
-my-landing-page/
-│
-├── public/
-│   ├── icons/
-│   ├── avatars/
-│
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Features.jsx
-│   │   ├── Pricing.jsx
-│   │   ├── Testimonials.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Footer.jsx
-│   │
-│   ├── styles/
-│   │   ├── Navbar.css
-│   │   ├── Features.css
-│   │   ├── Pricing.css
-│   │   ├── Testimonials.css
-│   │   ├── Contact.css
-│   │   ├── Footer.css
-│   │   ├── global.css
-│   │
-│   ├── data/
-│   │   └── content.js
-│   │
-│   ├── App.js
-│   └── index.js
-│
-├── package.json
-└── README.md
+SAASLandingPage/
+public/
+icons/
+avatars/
+
+src/
+components/
+Navbar.jsx
+Hero.jsx
+Features.jsx
+Pricing.jsx
+Testimonials.jsx
+Contact.jsx
+Footer.jsx
+
+styles/
+Navbar.css
+Features.css
+Pricing.css
+Testimonials.css
+Contact.css
+Footer.css
+global.css
+
+data/
+content.js
+
+App.js
+index.js
+
+package.json
+README.txt
 
 
 ### ▶️ How to Run the Project
